@@ -6,11 +6,14 @@ document.getElementById("inLogningForm").addEventListener("submit", function (ev
         alert("Ingen användarinformation hittades. Var god registrera dig först.");
         return;
     }
+    function saneraInput(input) {
+        return input.replace(/[<>/'"]/g, '');
+    }
 
-    var username0 = savedUserInformation.username;
+    var username0 = savedUserInformation.username.toLowerCase();
     var password0 = savedUserInformation.password;
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    var username = saneraInput(document.getElementById("username").value.toLowerCase());
+    var password = saneraInput(document.getElementById("password").value);
 
     if (username === username0 && password === password0) {
         savedUserInformation.inloggad = true;
