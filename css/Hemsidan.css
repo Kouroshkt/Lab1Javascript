@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 80px;
+}
+
+body {
+    background-color: black;
+    display: grid;
+    min-height: 50vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "hd hd hd hd hd "
+"mn mn mn mn sb"
+"mn mn mn mn sb"
+"mn mn mn mn sb"
+"ft ft ft ft ft";
+}
+
+.el {
+    display: grid;
+    place-content: center;
+    background-color: black;
+}
+
+.header {
+    grid-area: hd;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.headerMobil {
+    display: grid;
+    place-content: center;
+    grid-area: hd;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+.sidebar {
+    grid-area: sb;
+    place-content: center;
+}
+
+.footer {
+    grid-area: ft;
+    color: white;
+}
+.footerMobil {
+    display: none;
+}
+
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+h4 {
+    font-size: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h5 {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.ListAvMat {
+    display: grid;
+    grid-area: mn;
+    place-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.box {
+    display: grid;
+    place-content: center;
+    font-family: Calibri, serif;
+    grid-auto-columns: minmax(auto, 300px);
+    grid-auto-rows: minmax(180px, auto);
+    color: white;
+    text-decoration: none;
+}
+
+.boxSide {
+    display: grid;
+    font-family: Calibri, serif;
+    grid-auto-columns: minmax(auto, 300px);
+    color: white;
+}
+
+button {
+    position: absolute;
+    top: 20px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#buttonLoggaIn{
+    right: 20px;
+}
+
+#buttonRegistrera{
+    left: 20px;
+}
+
+@media (min-width: 1600px) {
+    .headerMobil{
+        display: none;
+    }
+}
+
+@media (min-width: 1280px)and (max-width: 1599px) {
+    .headerMobil{
+        display: none;
+    }
+    body {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .ListAvMat {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (min-width: 950px) and (max-width: 1279px) {
+    .headerMobil{
+        display: none;
+    }
+    body {
+        grid-template-columns: repeat(3, 1fr);
+        font-size: 22px;
+        grid-template-areas: "hd hd hd  "
+"mn mn mn "
+"mn mn mn "
+"ft ft ft ";
+    }
+    button {
+        font-size: 20px;
+    }
+
+    .ListAvMat {
+        grid-template-columns: repeat(3, 1fr);;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+}
+
+@media (min-width: 650px) and (max-width: 949px) {
+    .headerMobil{
+        display: none;
+    }
+    button {
+        font-size: 18px;
+    }
+    body {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 20px;
+        grid-template-areas: "hd hd   "
+"mn mn "
+"mn mn  "
+"ft ft  ";
+    }
+
+    .text-overlay {
+        font-size: 60px;
+    }
+
+    .ListAvMat {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 649px) {
+    .header {
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+     #LoggaIn{
+         right: 20px;
+     }
+     #Registrera{
+         left: 20px;
+     }
+
+    .footerMobil {
+        display: grid;
+        grid-area: ft;
+        color: white;
+        text-align: center;
+    }
+    .headerMobil {
+        display: grid;
+        grid-area: hd;
+    }
+
+    body {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "hd"
+"mn"
+"mn"
+"ft";
+    }
+
+    .text-overlay {
+        font-size: 40px;
+    }
+
+
+    .ListAvMat {
+        grid-template-columns: 1fr;
+    }
+
+
+    .sidebar {
+        display: none;
+    }
+
+    .image-container {
+        display: none;
+    }
+
+}

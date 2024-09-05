@@ -1,0 +1,17 @@
+body{
+    background-color: black;
+
+}
+#inLogningForm{
+    display: grid;
+    place-content: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: yellow;
+}
+button{
+    font-family: "Droid Sans Mono Dotted", monospace;
+    font-size: 15px;
+    cursor: pointer;
+
+}

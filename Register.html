@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrera</title>
+    <link rel="stylesheet" href="css/Register.css">
+</head>
+<body>
+<div class="container">
+    <div class="form-group">
+        <button id="Hembtn" onclick="window.location.href='Hemsidan.html'">Hem</button>
+        <h1 style="font-family: 'Comic Sans MS',serif; font-size:80px; color: white;  font-style: italic">MAT VAL
+        </h1>
+    </div>
+    <div class="form-group"><h2>Register</h2></div>
+    <form class="form" id="registerForm">
+        <div class="form-group">
+            <label for="name" >Namn</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email" >Email</label>
+            <input type="text" id="email" name="email" required><br>
+            <label for="username" >Användarnamn</label>
+            <input type="text" id="username" name="username" required><br>
+            <label for ="password" >Lösenord</label>
+            <input type="password" id="password" name="password" required><br>
+            <label><input type="checkbox" id="vegetarian" name="vegetarian">Vegetarian</label><br>
+            <label> Vilka dagar lagar du mat?</label>
+            <label><input type="checkbox" id="Monday" name="monday">Måndag</label>
+            <label><input type="checkbox" id="Tuesday" name="tuesday">Tisdag</label>
+            <label><input type="checkbox" id="Wednesday" name="wednesday">Onsdag</label>
+            <label><input type="checkbox" id="Thursday" name="thursday">Torsdag</label>
+            <label><input type="checkbox" id="Friday" name="friday">Fredag</label>
+            <label><input type="checkbox" id="Saturday" name="saturday">Lördag</label>
+            <label><input type="checkbox" id="Sunday" name="sunday">Söndag</label><br>
+            <input id="submit" type="submit" value="Registrera "><br><br>
+            <div id="message"></div>
+        </div>
+    </form>
+</div>
+<script src="js/Register.js"></script>
+</body>
+</html>

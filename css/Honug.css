@@ -1,0 +1,34 @@
+
+#image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+.box {
+    place-content: center;
+    font-family: Calibri, serif;
+    text-decoration: none;
+    font-size: 22px;
+}
+.main {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: minmax(auto,850px);
+    justify-content: center;
+    color: white;
+}
+body {
+    background-color: black;
+}
+button{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    z-index: 10;
+    background-color: darkolivegreen;
+    border-radius: 5px;
+    color: yellow;
+    cursor: pointer;
+}
