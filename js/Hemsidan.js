@@ -6,7 +6,7 @@ const dishes = [
         "imgHeight": 200,
         "title": "Honug och senapsrostad lax med rödbetssallad och krämig potatis",
         "description": "SNABB | GLUTENFRI",
-        "details": "20 minuter | Lätt | 986 kcal"
+        "details": "20 min | Lätt | 986 kcal"
     },
     {
         "href": "chorizo.html",
@@ -15,7 +15,7 @@ const dishes = [
         "imgHeight": 200,
         "title": "Chorizospaghetti i cajunsås med paprika och rosmarinspangrattato",
         "description": "SNABB",
-        "details": "25 minuter | Lätt | 980 kcal"
+        "details": "25 min | Lätt | 980 kcal"
     },
     {
         "href": "",
@@ -23,17 +23,17 @@ const dishes = [
         "imgAlt": "Bild av Nötfärsbowl",
         "imgHeight": 200,
         "title": "Nötfärsbowl med mongolisk glaze med pak choisallad och bulguro",
-        "description": "SNABB | LÅGKALORI | MJÖLHFRI",
-        "details": "25 minuter | Lätt | 614 kcal"
+        "description": "SNABB | MJÖLHFRI",
+        "details": "25 min | Lätt | 614 kcal"
     },
     {
         "href": "",
         "imgSrc": "img/stekt.avif",
         "imgAlt": "Bild av Stekt fläskkotlett",
         "imgHeight": 200,
-        "title": "Stekt fläskkotlett i schalottenlökssås med palsternacksmos och rädissallad",
+        "title": "Stekt fläskkotlett i schalottenlökssås med sallad och rädissallad",
         "description": "SNABB | LÅGKALORI",
-        "details": "20 minuter | Lätt | 626 kcal"
+        "details": "20 min | Lätt | 626 kcal"
     },
     {
         "href": "",
@@ -42,16 +42,16 @@ const dishes = [
         "imgHeight": 200,
         "title": "Thailändsk larb på fläskfärs och ris med färsk gurka och salta jordnötter",
         "description": "SUPERSNABB | GLUTENFRI",
-        "details": "15 minuter | Lätt | 814 kcal"
+        "details": "15 min | Lätt | 814 kcal"
     },
     {
         "href": "",
         "imgSrc": "img/festlig.jpg",
         "imgAlt": "Bild av Festlig BBQ-lax",
         "imgHeight": 200,
-        "title": "Festlig BBQ-lax och ranchdressing med majs- och jordnötssalsa och kålsallad",
+        "title": "Festlig BBQ-lax och ranchdressing med jordnötssalsa och kålsallad",
         "description": "GLUTENFRI",
-        "details": "30 minuter | Lätt | 1393 kcal"
+        "details": "30 min | Lätt | 1393 kcal"
     },
     {
         "href": "",
@@ -60,7 +60,7 @@ const dishes = [
         "imgHeight": 200,
         "title": "Pannstekt kolja med syltad gurksallad med senapsdressing",
         "description": "GLUTENFRI | LÅGKALORI",
-        "details": "35 minuter | Lätt | 527 kcal"
+        "details": "35 min | Lätt | 527 kcal"
     },
     {
         "href": "",
@@ -69,7 +69,7 @@ const dishes = [
         "imgHeight": 200,
         "title": "Krämig calabresepasta med körsbärstomater med persiljebröd",
         "description": "SNABB",
-        "details": "20 minuter | Lätt | 992 kcal"
+        "details": "20 min | Lätt | 992 kcal"
     },
     {
         "href": "",
@@ -78,8 +78,8 @@ const dishes = [
         "imgHeight": 200,
         "title": "Stekt torsk i citronsmörsås\n" +
             "med krossad potatis och syltad rödlök",
-        "description": "Barnvänlig | LÅGKALORI | GLUTENFRI",
-        "details": "30 minuter | Lätt | 461 kcal"
+        "description": "Barnvänlig | GLUTENFRI",
+        "details": "30 min | Lätt | 461 kcal"
     },
     {
         "href": "",
@@ -88,8 +88,8 @@ const dishes = [
         "imgHeight": 200,
         "title": "Asiatisk-inspirerad öring\n" +
             "med nudelsallad och sweet chilisås",
-        "description": "SNABB | BArnvänlig | Mjölkfri",
-        "details": "20 minuter | Medel | 980 kcal"
+        "description": "SNABB | Mjölkfri",
+        "details": "20 min | Medel | 980 kcal"
     },
     {
         "href": "",
@@ -97,9 +97,9 @@ const dishes = [
         "imgAlt": "Bild av al pastor",
         "imgHeight": 200,
         "title": "Al pastor-burrito\n" +
-            "med salsa, guacamole och tortillachips",
+            "med salsa, guacamole och tortillachips i brika",
         "description": "SNABB | GLUTENFRI",
-        "details": "30 minuter | Lätt | 870 kcal"
+        "details": "30 min | Lätt | 870 kcal"
     },
     {
         "href": "",
@@ -109,7 +109,7 @@ const dishes = [
         "title": "Frikadeller och bearnaise-potatissallad\n" +
             "med rädis- och körsbärstomatsallad",
         "description": "Gluten | Vete",
-        "details": "25 minuter | Lätt | 1120 kcal"
+        "details": "25 min | Lätt | 1120 kcal"
     }
 ]
 
@@ -155,7 +155,9 @@ if (savedUserInformation.inloggad) {
         document.getElementById("dag").textContent = "Välkommen " +`${name};`
     }
     document.getElementById("buttonLoggaIn").textContent = "Du är inloggad";
-    document.getElementById("buttonLoggaIn").href = "";
+    document.getElementById("buttonLoggaIn").addEventListener("click", function () {
+        window.location.href = "";
+    })
     document.getElementById("buttonRegistrera").textContent = "Logga ut";
     document.getElementById("buttonRegistrera").addEventListener("click", function () {
         savedUserInformation.inloggad = false;

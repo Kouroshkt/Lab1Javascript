@@ -134,10 +134,12 @@ button {
     margin-left: 10px;
 }
 #buttonLoggaIn{
+    font-size: 20px;
     right: 20px;
 }
 
 #buttonRegistrera{
+    font-size: 20px;
     left: 20px;
 }
 
@@ -167,18 +169,26 @@ button {
     }
     body {
         grid-template-columns: repeat(3, 1fr);
-        font-size: 22px;
+        font-size: 26px;
         grid-template-areas: "hd hd hd  "
 "mn mn mn "
 "mn mn mn "
 "ft ft ft ";
     }
-    button {
-        font-size: 20px;
+    h5{
+        font-size: 26px;
+    }
+    #buttonLoggaIn{
+        font-size: 26px;
     }
 
+    #buttonRegistrera{
+        font-size: 26px;
+    }
     .ListAvMat {
-        grid-template-columns: repeat(3, 1fr);;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(300px, auto);
+        grid-auto-columns: minmax(300px, auto);
     }
 
     .sidebar {
@@ -224,10 +234,10 @@ button {
         display: none;
     }
      #LoggaIn{
-         right: 20px;
+         right: 10px;
      }
      #Registrera{
-         left: 20px;
+         left: 10px;
      }
 
     .footerMobil {
