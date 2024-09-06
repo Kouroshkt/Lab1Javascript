@@ -17,13 +17,13 @@
     <form class="form" id="registerForm">
         <div class="form-group">
             <label for="name" >Namn</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" pattern="^[a-zA-Z]+$" minlength="3" title="Endast bokstäver" required><br>
             <label for="email" >Email</label>
             <input type="text" id="email" name="email" required><br>
             <label for="username" >Användarnamn</label>
-            <input type="text" id="username" name="username" required><br>
+            <input type="text" id="username" name="username" pattern="^[a-zA-Z]+$" minlength="3" title="Endast bokstäver" required><br>
             <label for ="password" >Lösenord</label>
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" id="password" name="password" minlength="6" title="Minst 6 tecken" required><br>
             <label><input type="checkbox" id="vegetarian" name="vegetarian">Vegetarian</label><br>
             <label> Vilka dagar lagar du mat?</label>
             <label><input type="checkbox" id="Monday" name="monday">Måndag</label>
