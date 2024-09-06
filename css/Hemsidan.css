@@ -101,6 +101,7 @@ h5 {
 .ListAvMat {
     display: grid;
     grid-area: mn;
+    font-size: 26px;
     place-content: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -187,8 +188,6 @@ button {
     }
     .ListAvMat {
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(300px, auto);
-        grid-auto-columns: minmax(300px, auto);
     }
 
     .sidebar {

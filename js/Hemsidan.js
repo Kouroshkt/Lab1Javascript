@@ -152,7 +152,7 @@ if (savedUserInformation.inloggad) {
     } else if (new Date().getDay() === 0 && savedUserInformation.sunday) {
         document.getElementById("dag").textContent = `Välkommen ${name}, idag är söndag och det är dags att laga mat!`;
     } else {
-        document.getElementById("dag").textContent = "Välkommen " +`${name};`
+        document.getElementById("dag").textContent = "Välkommen " + `${name};`
     }
     document.getElementById("buttonLoggaIn").textContent = "Du är inloggad";
     document.getElementById("buttonLoggaIn").addEventListener("click", function () {
@@ -167,3 +167,9 @@ if (savedUserInformation.inloggad) {
 } else {
     console.log("Ingen användarinformation hittades i localStorage.");
 }
+fetch('http://worldtimeapi.org/api/ip')
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("tid").textContent = `Din lokala tid: ${new Date(data.datetime).toLocaleString()}`;
+    })
+    .catch(error => console.error('Fel:', error));
